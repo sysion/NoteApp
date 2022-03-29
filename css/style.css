@@ -1,0 +1,8 @@
+html{
+	font-family: tahoma, verdana, sans-serif, arial, helvetica; 
+	font-size:  62.5%;  /* i.e. 10px because 10px/16px = 62.5% */
+}
+
+body{ 
+	font-size:  1.6rem;
+}
