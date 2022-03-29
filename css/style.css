@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html{
 	font-family: tahoma, verdana, sans-serif, arial, helvetica; 
 	font-size:  62.5%;  /* i.e. 10px because 10px/16px = 62.5% */
@@ -7,85 +13,90 @@ body{
 	font-size:  1.6rem;
 }
 
-.addnote{
-	clear: both;
-	width: 100%;
+.container{
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
-.addbutton {
-	margin: 10px;
-	width: 200px;
-	height: 40px;
-	background-color: cyan;
-	margin: 10px auto;
+.add-button{
 	display: block;
-	border-radius: 10px;
+	width: 20rem;
+	margin: 0 auto;
+	padding: 0.5rem;
+	font-size: 2.5rem;
 	border: none;
-	font-size: 1.6rem;
+	border-radius: 1rem;
+	background-color: #12cc56;
 }
 
-/* remove outline around button when clicked */
-.addbutton:focus{
+.add-button:focus{
 	outline: none;
-	box-shadow: none
+	box-shadow: none;
 }
 
 .notes{
-	width: 80%;
-	margin: 0 auto;  
+	display: flex;
+	flex-direction: row;	/* default = row, other values: row-reverse, column, column-reverse */ 
+	flex-wrap: wrap;	 	/* default = nowrap, other values: wrap, wrap-reverse */ 
+	justify-content: flex-start;	/* default = flex-start, other values: flex-end, center, space-between, space-around */ 
 }
 
-.notecontainer{
-	margin: 10px;
-	float: left;
-}
-		
-.noteheader{
-	width: 20rem;
-	height: 20px;
-	background-color: #888888;
-	padding: 10px;
-	margin: 0 10px;
+.note-container{
+	width: 25rem;
+	margin: 0 1rem;
+	margin-top: 1.5rem;
+	font-size: 2rem;
 }
 
-.icon{
+.note-header{
+	width: 100%;
+	height: 3.5rem;
+	background-color: #777777;
+}
+
+.note-header-icon{
 	float: right;
+	margin: 0.5rem auto;
 }
 
-.edit{
-	margin: 0 5px;
+.edit-note{
+	padding: 0.5rem;
+	margin: 0.5rem;
 }
 
-.delete{
-	margin: 0 5px;
+.delete-note{
+	padding: 0.5rem;
+	margin: 0.5rem;
 }
 
-.notebody{
-	width: 20rem;
-	height: 24rem;
-	margin: 0 10px 20px 10px;
+.note-body{
+	width: 100%;
+	height: 30rem;
+	position: relative; /* required to enable ABSOLUTE placement of inner div */
 }
 
-.notediv{
+.note-div{
 	width: 100%;
 	height: 100%;
-	font-size: 1.6rem;
-	padding: 10px;
-	text-align: left;
-	background-color: #bbbbbb;
+	padding: 1rem;
+	background-color: #aaaaaa;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.notearea{
+.note-area{
 	width: 100%;
 	height: 100%;
-	font-size: 1.6rem;
-	padding: 10px;
-	text-align: left;
+	padding: 1rem;
 	resize: none;   /* disable the resizable property of a textarea */
-}
+	position: absolute;
+	top: 0;
+	left: 0;
 
-#notediv1{
-	background-color: #ff0000;
+	font-size: 2rem;
 }
 
 .hidden{
